@@ -30,6 +30,6 @@ jobs:
     - name: Build, tag, and push Docker image
       run: |
         aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/k5u0o7b3
-        docker build -t majd-namegen .
+        docker build -t majd-namegen ./namegen
         docker tag majd-namegen:latest public.ecr.aws/k5u0o7b3/majd-namegen:latest
         docker push public.ecr.aws/k5u0o7b3/majd-namegen:latest
