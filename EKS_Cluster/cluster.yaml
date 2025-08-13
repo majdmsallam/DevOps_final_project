@@ -5,3 +5,4 @@ metadata:
   region: eu-central-1
 autoModeConfig:
   enabled: true
+  
