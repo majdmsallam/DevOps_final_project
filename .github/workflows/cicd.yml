@@ -37,7 +37,7 @@ jobs:
     - name: Deploy to EKS
       run: |
         aws eks --region eu-central-1 update-kubeconfig --name project-cluster
-        kubectl apply -f k8s_manifests/db_sc.yaml
+        kubectl apply -f k8s_manifests/sc.yaml
         kubectl apply -f k8s_manifests/db_deployment.yaml
         kubectl apply -f k8s_manifests/db_svc.yaml
         kubectl rollout status statefulset/mongo
